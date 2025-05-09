@@ -10,14 +10,18 @@
     </style>
     <link rel="stylesheet" href="styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<div class="charts-container">
-  <div class="chart-card">
-    <h2>Bitcoin Price History (30 Days)</h2>
-    <canvas id="btcPriceChart"></canvas>
+<div class="main-container">
+  <div class="chart-section">
+    <h2>Bitcoin Price History</h2>
+    <div class="chart-wrapper">
+      <canvas id="btcPriceChart"></canvas>
+    </div>
   </div>
-  <div class="chart-card">
+ <div class="chart-section">
     <h2>Portfolio Growth</h2>
-    <canvas id="portfolioGrowthChart"></canvas>
+    <div class="chart-wrapper">
+      <canvas id="portfolioGrowthChart"></canvas>
+    </div>
   </div>
 </div>
         <title>My BTC Portfolio Tracker</title>
@@ -40,7 +44,19 @@
         <p>Portfolio Value: <span id="portfolio-value">$0</span></p>
         <p>Profit/Loss: <span id="profit-loss">$0</span></p>
     </div>
-
+<div class="input-section">
+    <div class="container">
+      <!-- Your existing input/portfolio content -->
+      <h1>My Bitcoin Portfolio</h1>
+      <div class="input-group">
+        <!-- Your input fields -->
+      </div>
+      <div class="value-container">
+        <!-- Your portfolio stats -->
+      </div>
+    </div>
+  </div>
+</div>
     <script>
         // Fetch BTC Price from CoinGecko API
         async function fetchBTCPrice() {
