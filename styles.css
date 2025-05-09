@@ -187,3 +187,61 @@ canvas {
   width: 100% !important;
   height: 300px !important;
 }
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+chart-section {
+  background: rgba(25, 25, 25, 0.9);
+  border-radius: 1rem;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.chart-section h2 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.chart-wrapper {
+  height: 400px;
+  position: relative;
+}
+
+.input-section .container {
+  margin: 0;
+  width: 100%;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Modify existing container style */
+.container {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.value-container {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+  
+  .chart-section {
+    padding: 1.5rem;
+  }
+  
+  .chart-wrapper {
+    height: 300px;
+  }
+}
