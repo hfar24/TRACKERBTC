@@ -9,6 +9,17 @@
         #btc-price, #portfolio-value { font-size: 24px; }
     </style>
     <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="charts-container">
+  <div class="chart-card">
+    <h2>Bitcoin Price History (30 Days)</h2>
+    <canvas id="btcPriceChart"></canvas>
+  </div>
+  <div class="chart-card">
+    <h2>Portfolio Growth</h2>
+    <canvas id="portfolioGrowthChart"></canvas>
+  </div>
+</div>
 </head>
 <body>
     <div class="container">
