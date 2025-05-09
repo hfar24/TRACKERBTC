@@ -1,0 +1,165 @@
+/* styles.css */
+:root {
+  --primary: #2a2a2a;
+  --secondary: #1a1a1a;
+  --accent: #f7931a; /* Bitcoin orange */
+  --text: #ffffff;
+  --profit: #16c784;
+  --loss: #ea3943;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(25, 25, 25, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, var(--accent), #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  padding: 1rem;
+  background: var(--primary);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(247, 147, 26, 0.2);
+}
+
+.price-display {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--secondary);
+  border-radius: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+#btc-price {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(247, 147, 26, 0.3);
+}
+
+.value-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.portfolio-stat {
+  background: var(--primary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-stat h3 {
+  color: #888;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+#portfolio-value {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#profit-loss {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.profit { color: var(--profit); }
+.loss { color: var(--loss); }
+
+.refresh-button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(45deg, var(--accent), #e67e22);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(247, 147, 26, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  input {
+    width: 100%;
+  }
+}
