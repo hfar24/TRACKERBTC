@@ -163,3 +163,28 @@ input:focus {
     width: 100%;
   }
 }
+/* Add these to your styles.css */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.chart-card {
+  background: var(--primary);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chart-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
