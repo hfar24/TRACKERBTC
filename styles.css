@@ -163,7 +163,6 @@ input:focus {
     width: 100%;
   }
 }
-/* Add these to your styles.css */
 .charts-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
